@@ -1,16 +1,15 @@
 import React from "react";
 import "./App.css";
-import SearchForm from "./components/Search";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "./components/Main";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-      <strong><p>hello squritle</p></strong>
-      <SearchForm/>
-      </div>
-    );
-  }
-}
+const App = () =>
+  <Router>
+    <div> 
+      <Switch>
+        <Route exact path="/" component={Main} />
+      </Switch>
+    </div>
+  </Router>;
 
 export default App;

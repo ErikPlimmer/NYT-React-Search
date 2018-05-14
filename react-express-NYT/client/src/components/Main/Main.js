@@ -11,8 +11,8 @@ class Main extends Component {
 
 	state = {
 		topic: "Food",
-		begindate: "20171201",
-		enddate:"20171205",
+		begindate: "20180201",
+		enddate:"20180405",
 		articles: [],
 		savedarticles: [],
 	};
@@ -124,7 +124,7 @@ class Main extends Component {
 				        	<p className="section-header">Search Results</p>
 					        <Searched>
 					   			{this.state.articles ? 
-					   				this.state.articles.slice(0,5).map((article,i) =>  (
+					   				this.state.articles.slice(0,10).map((article,i) =>  (
 					       			<Searcheditems key={i}>
 					       				<span><a target="blank" href={article.web_url}>{article.headline.main} </a></span>
 					       				<Savebtn value={article.headline.main} onClick={() => this.saveArticle(article.headline.main, article.web_url)}/>
